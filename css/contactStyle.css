@@ -1,0 +1,140 @@
+body{
+    margin:0;
+    background-image: url('../img/img1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.nav-bar{
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92px;
+}
+.container{
+    width: 80%;
+    margin: 40px auto 0;
+    padding: 0 15px;
+    height: 52px;
+}
+#logo{
+    width: 170px;
+    font-family: 'Shrikhand', cursive;
+    z-index: 2;
+    position: absolute;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 200;
+    float: left;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 5px;
+    border: solid 1px #FAFAFA;
+    border-radius: 5px;
+}
+#logo a{
+    text-decoration: none;
+}
+#logo:hover{
+    background-color: #512DA8;
+}
+.nav-list{
+    position: relative;
+    z-index: 2;
+    display: block;
+    float: right;
+    width: 380px;
+    height: 52px;
+}
+.nav-list a{
+    font-family: 'Oswald', sans-serif;
+    display: inline-block;
+    font-size: 25px;
+    padding: 0 15px;
+    color: #FAFAFA;
+    font-weight: 200;
+    text-decoration: none;
+}
+.nav-list a:hover{
+    text-decoration: none;
+    color: #673AB7;
+}
+header{
+    height: 500px;
+    position: relative;
+}
+#background-overlay{
+    position: absolute !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+}
+.header-text {
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+    bottom: -200px;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.header-text h1{
+    font-size: 50px;
+    color: #FFEB3B;
+    margin: auto;
+    position: relative;
+    font-family: 'Shrikhand', cursive;
+}
+.main{
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: -21px;
+}
+.conact{
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+    background: rgba(0, 0, 0, 0.5);
+}
+.conact h1,h3,p,ul{
+    color: #FFF59D;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+
+.form{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.contact-input{
+    height: 40px;
+    width: 100%;
+    padding: 5px;
+    margin: 10px auto;
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+.form textarea{
+    height: 100px;
+}
+.submitButton{
+    width: 170px;
+    height: 50px;
+    background-color: #FFD54F;
+    border:none;
+    color: #424242;
+}
+footer{
+    height: 40px;
+    text-align: center;
+}
