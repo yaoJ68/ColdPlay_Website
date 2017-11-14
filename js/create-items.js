@@ -3,12 +3,34 @@ for (var i = 0; i < items.length; i++) {
     // generate html for the album
     document.writeln("<div class='album'>");
 
+    //generate the audio -- currently not fully implemented
+    document.write("<audio id=\"");
+    document.write(i+1);
+    document.writeln("\">");
+    document.writeln("<source src=\"");
+    document.write(items[i].audioLoction);
+    document.writeln("\"></source>");
+    document.writeln("</audio>");
+
     // generate html for the image inside each box and the product description
+    document.writeln("<div class=\"flip-container\" ontouchstart=\"this.classList.toggle('hover');\">");
+    document.writeln("<div class=\"flipper\">");
+    document.writeln("<div class=\"front\">");
     document.write("<img class='album-image' src='");
     document.write(items[i].photoLocation);
     document.write("' alt='");
     document.write(items[i].description);
     document.writeln("'>");
+    document.writeln("</div>");
+    document.writeln("<div class=\"back\">");
+    document.write("<img class='album-image' src='");
+    document.write(items[i].backCover);
+    document.write("' alt='");
+    document.write(items[i].description);
+    document.writeln("'>");
+    document.writeln("</div>");
+    document.writeln("</div>");
+    document.writeln("</div>");
 
     // generate html for the model
     document.write("<h4>");
@@ -34,4 +56,5 @@ for (var i = 0; i < items.length; i++) {
 
     // generate html to close the album div
     document.writeln("</div>");
+
 }
