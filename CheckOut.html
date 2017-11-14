@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>CheckOut</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
+    <script src="./js/menu-script.js"></script>
+    <script src="js/items.js"></script>
     <script>
         function sayHello() {
             var x=document.getElementsByClassName('form-control');
@@ -20,7 +21,12 @@
         }
     </script>
 </head>
-<body>
+<body onload="init()">
+
+<div id="catalog">
+    <script src="./js/checkout.js"></script>
+</div>
+
 
     <h1 style="text-align: center;position: relative;top: 30px;">Check Out</h1>
     <form style=" width: 60%;margin: 60px auto;" method="post">
