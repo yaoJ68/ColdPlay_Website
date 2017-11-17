@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Store</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="css/storeStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="js/items.js"></script>
+    <script src="./js/items.js"></script>
     <script src="./js/cart-script.js"></script>
 </head>
-<body>
+<body onload="init()">
 <header>
     <div id="background-overlay">
         <div class="nav-bar">
@@ -30,29 +29,31 @@
         </div>
 
         <div class="header-text">
-            <h1>STORE</h1>
+            <h1>CART</h1>
         </div>
     </div>
 </header>
 
 <div class="main">
     <div class="visit-store">
-        <p>Albums</p>
+        <p>In Cart</p>
     </div>
     <div class="album-list">
-        <script src="js/create-items.js"></script>
-        <script src="js/store-script.js"></script>
+        <p id="cart-remove"><script src="./js/cart-items.js"></script></p>
     </div>
-    <div class="play-audio">
-        <audio id="storeAudio">
-            <source src="audio/mashup.mp3"></source>
-        </audio>
-        <script src="js/storePlayAudio.js"></script>
-    </div>
+    <p class="icons">
+        <a href="./Store.html">
+            <button type='button' class='btn btn-warning' style='margin: 10px 5px;' id=" + i +">Keep Shopping</button>
+        </a>
+        <a href="./CheckOut.html">
+            <button type='button' class='btn btn-warning' style='margin: 10px 5px;'>To Checkout</button>
+        </a>
+        <span id="total" style="color:white"></span>
+    </p>
 </div>
 
 <footer>
     <p style="color: #FAFAFA;"><i>Created by Y. Jiang</i></p>
 </footer>
 </body>
-</html>s
+</html>
