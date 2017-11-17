@@ -7,6 +7,7 @@ function init() {
     for (let i = 0; i < buyButton.length; i++) {
         buyButton[i].addEventListener("click", function(){
             addToCart(buyButton[i].id);
+            buyButton[i].innerHTML = "Added to Cart";
         });
     }
 
@@ -22,6 +23,11 @@ function init() {
         totalPrice = totalPrice + parseFloat(itemsToBuy[i].price);
     }
     document.getElementById("total").innerHTML = totalPrice.toFixed(2);
+
+    var buy_button = document.getElementsByClassName("btn btn-warning buy");
+    buy_button.addEventListener('click', function() {
+        buy_button.innerHTML = "Added to Cart";
+    });
 }
 
 function addToCart(id) {
