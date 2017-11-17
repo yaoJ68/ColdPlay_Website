@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Store</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="css/storeStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
@@ -29,26 +29,28 @@
         </div>
 
         <div class="header-text">
-            <h1>STORE</h1>
+            <h1>CART</h1>
         </div>
     </div>
 </header>
 
 <div class="main">
     <div class="visit-store">
-        <p>Albums</p>
+        <p>In Cart</p>
     </div>
     <div class="album-list">
-        <script src="./js/create-items.js"></script>
-        <script src="./js/store-script.js"></script>
+        <p id="cart-remove"><script src="./js/cart-items.js"></script></p>
     </div>
-</div>
-
-<div class="play-audio">
-    <audio id="storeAudio">
-        <source src="audio/mashup.mp3"></source>
-    </audio>
-    <script src="js/storePlayAudio.js"></script>
+    <p class="icons">
+        <a href="./Store.html">
+            <button type='button' class='btn btn-warning' style='margin: 10px 5px;' id=" + i +">Keep Shopping</button>
+        </a>
+        <a href="./CheckOut.html">
+            <button type='button' class='btn btn-warning' style='margin: 10px 5px;'>To Checkout</button>
+        </a>
+        <span style="color:white">Total: </span>
+        <span id="total" style="color:white"></span>
+    </p>
 </div>
 
 <footer>

@@ -37,16 +37,14 @@ for (var i = 0; i < items.length; i++) {
     document.write(items[i].title);
     document.writeln("</h4>");
 
-    // generate html for the price
+    // gener     W 3ate html for the price
     document.write("<h5>");
     document.write(items[i].price);
     document.writeln("</h5>");
 
     // generate html for buy icon and link to amazon
     document.writeln("<p class='icons'>");
-    document.writeln("<a href='Checkout.html'>");
-    document.writeln("<button type='button' class='btn btn-warning' style='margin: 10px 5px;'>Buy Now</button>");
-    document.writeln("</a>");
+    document.writeln("<button type='button' data-text-swap=\"Added to Cart\" class='btn btn-warning buy' style='margin: 10px 5px;' id=" + i +">Buy Now</button>");
     document.write("<a href='");
     document.write(items[i].saleLocation);
     document.writeln("'>");

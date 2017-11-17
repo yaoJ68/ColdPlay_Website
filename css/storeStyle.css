@@ -44,7 +44,7 @@ body{
     z-index: 2;
     display: block;
     float: right;
-    width: 380px;
+    width: 480px;
     height: 52px;
 }
 .nav-list a{
@@ -212,4 +212,9 @@ footer{
 /* back, initially hidden pane */
 .back {
     transform: rotateY(180deg);
+}
+
+.checkout_total {
+    color: #ffffff;
+    float: right;
 }
