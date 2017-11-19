@@ -4,66 +4,100 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-.nav-bar{
-    position: absolute;
-    padding: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 92px;
-}
-.container{
-    width: 80%;
-    margin: 40px auto 0;
-    padding: 0 15px;
-    height: 52px;
-}
-#logo{
-    width: 190px;
-    font-family: 'Shrikhand', cursive;
-    z-index: 2;
-    position: absolute;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 200;
-    float: left;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 8px;
-    border: solid 1px #FAFAFA;
-    border-radius: 5px;
-}
-#logo a{
-    text-decoration: none;
-}
-#logo:hover{
-    background-color: #512DA8;
-}
-.nav-list{
-    position: relative;
-    z-index: 2;
-    display: block;
-    float: right;
-    width: 480px;
-    height: 52px;
-}
-.nav-list a{
-    font-family: 'Oswald', sans-serif;
-    display: inline-block;
-    font-size: 25px;
-    padding: 0 15px;
-    color: #FAFAFA;
-    font-weight: 200;
-    text-decoration: none;
-}
-.nav-list a:hover{
-    text-decoration: none;
-    color: #673AB7;
-}
 header{
 
     height: 650px;
     position: relative;
+}
+/*navigation bar*/
+/* basic menu styles */
+.block-menu {
+    display: block;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.block-menu li {
+    display: inline-block;
+}
+
+.block-menu li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-smoothing: antialiased;
+    text-transform: uppercase;
+    overflow: visible;
+    line-height: 20px;
+    font-size: 24px;
+    padding: 15px 10px;
+}
+
+/* animation domination */
+.three-d {
+    perspective: 200px;
+    transition: all .07s linear;
+    position: relative;
+    cursor: pointer;
+}
+/* complete the animation! */
+.three-d:hover .three-d-box,
+.three-d:focus .three-d-box {
+    transform: translateZ(-25px) rotateX(90deg);
+}
+
+.three-d-box {
+    transition: all .3s ease-out;
+    transform: translatez(-25px);
+    transform-style: preserve-3d;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+	put the "front" and "back" elements into place with CSS transforms,
+	specifically translation and translatez
+*/
+.nav-front {
+    transform: rotatex(0deg) translatez(25px);
+    background: black;
+}
+
+.nav-back {
+    transform: rotatex(-90deg) translatez(25px);
+    background-color: #616161;
+}
+
+.nav-front, .nav-back {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 15px 10px;
+    color: white;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+/* arrange cart image*/
+.cart-image{
+    padding: 10px 0;
+    position: absolute;
+    right: 30px;
+}
+.cart-image img{
+    height: 45px;
+    object-fit: cover;
+}
+.cart-image img:hover{
+    transform: rotatez(-25deg);
 }
 #background-overlay{
     position: absolute !important;
@@ -97,38 +131,11 @@ header{
     height: 600px;
     position: relative;
 }
-#background-overlay{
-    position: absolute !important;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.3);
-}
-.header-text {
-    width: 500px;
-    height: 250px;
-    margin: 0 auto;
-    position: relative;
-    bottom: -200px;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-}
-.header-text h1{
-    font-size: 50px;
-    color: #FFEB3B;
-    margin: auto;
-    position: relative;
-    font-family: 'Shrikhand', cursive;
-}
 .main{
-    width: 100%;
+    width: 85%;
     background: rgba(0, 0, 0, 0.3);
     padding: 20px;
+    margin: 0 auto;
 }
 
 .visit-store{
@@ -137,6 +144,7 @@ header{
     font-size: 45px;
     color: #FAFAFA;
     border-bottom: solid 1px #FAFAFA;
+    margin: 0 0 15px;
 
 }
 .album-list{
@@ -149,9 +157,9 @@ header{
 .album{
     display: inline-block;
     position: relative;
-    width: 22%;
-    height: 500px;
+    width: 200px;
     margin: 0 10px;
+
 }
 .album h4{
     height: 60px;
@@ -161,8 +169,9 @@ header{
 .album-image{
     display: block;
     width: 100%;
+    height: 200px;
     border-radius: 10px;
-    object-fit: fill !important;
+    object-fit: cover !important;
 }
 
 footer{
@@ -181,25 +190,26 @@ footer{
 }
 
 .flip-container, .front, .back {
+    margin-top: 1px;
     width: 100%;
-    height: 310px;
+    height: 250px;
 }
 
 /* flip speed goes here */
 .flipper {
     transition: 0.6s;
     transform-style: preserve-3d;
-
     position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
     backface-visibility: hidden;
-
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 /* front pane, placed above back */
@@ -218,3 +228,4 @@ footer{
     color: #ffffff;
     float: right;
 }
+
