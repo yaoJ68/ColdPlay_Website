@@ -54,6 +54,7 @@ header{
     -ms-transform:scale(1.25); /* IE 9 */
     -o-transform:scale(1.25); /* Opera */
     transform:scale(1.25);
+   
 }
 /*navigation bar*/
 /* basic menu styles */
@@ -64,13 +65,12 @@ header{
     width: 100%;
    
 }
-
 .block-menu li {
     display: inline-block;
 }
 
 .block-menu li a {
-    color: #fff;
+    color: #FFEB3B;
     display: block;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
@@ -81,7 +81,6 @@ header{
     font-size: 24px;
     padding: 15px 10px;
 }
-
 /* animation domination */
 .three-d {
     perspective: 200px;
@@ -114,7 +113,7 @@ header{
 */
 .nav-front {
     transform: rotatex(0deg) translatez(25px);
-    background: black;
+    background: black 0 0;
 }
 
 .nav-back {
@@ -141,17 +140,37 @@ header{
     position: absolute;
     right: 30px;
 }
-.cart-image img{
-    height: 45px;
+.cart-image span{
+    color: #FFEB3B;
+    font-size: 33px;
+    height: 43px;
     object-fit: cover;
 }
-.cart-image img:hover{
+.cart-image span:hover{
     transform: rotatez(-25deg);
 }
-.icons button:hover{
-    cursor: pointer;
-    background-color: #FF9100;
+.social_icon{
+    display: inline-block;
+    overflow: auto;
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    height: 100%;
 }
+.social_icon i{
+    color: #4DB6AC;
+    font-size: 30px;
+    margin: 10px;
+}
+.social_icon i:hover{
+    color: #ffffff;
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
 .main{
     width: 85%;
     background: rgba(0, 0, 0, 0.3);
@@ -185,7 +204,7 @@ header{
 
 }
 .album h4{
-    height: 100px;
+    height: 50px;
     margin: auto 0;
     padding-top: 5px;
 }
