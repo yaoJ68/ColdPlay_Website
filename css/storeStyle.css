@@ -1,19 +1,68 @@
-body{
+html,body{
     margin:0;
     background-image: url('../img/img3.jpg');
     background-attachment: fixed;
     background-size: cover;
+    height: 100%;
 }
 header{
-
-    height: 650px;
+    height: 80%;
     position: relative;
+}
+#background-overlay{
+    position: absolute !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+}
+.header-text {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+.header-text h1{
+    font-size: 50px;
+    color: #FFEB3B;
+    margin: auto;
+    font-family: 'Nosifer', cursive;
+    position: relative;
+    top: 40%;
+}
+.scroll{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+.scroll_image{
+    height: 50px;
+}
+.scroll_image:hover{
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
 }
 /*navigation bar*/
 /* basic menu styles */
 .block-menu {
     display: block;
-    background: rgba(0, 0, 0, 0.2);
+    background: #000;
+    position: fixed;
+    width: 100%;
+   
 }
 
 .block-menu li {
@@ -99,52 +148,26 @@ header{
 .cart-image img:hover{
     transform: rotatez(-25deg);
 }
-#background-overlay{
-    position: absolute !important;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.3);
-}
-.header-text {
-    width: 500px;
-    height: 250px;
-    margin: 0 auto;
-    position: relative;
-    bottom: -200px;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-}
-.header-text h1{
-    font-size: 50px;
-    color: #FFEB3B;
-    margin: auto;
-    position: relative;
-    font-family: 'Shrikhand', cursive;
-}
-header{
-    height: 600px;
-    position: relative;
+.icons button:hover{
+    cursor: pointer;
+    background-color: #FF9100;
 }
 .main{
     width: 85%;
     background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     margin: 0 auto;
+    opacity: 0;
 }
 
 .visit-store{
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    font-size: 45px;
+    font-size: 36px;
     color: #FAFAFA;
     border-bottom: solid 1px #FAFAFA;
     margin: 0 0 15px;
+    text-decoration: overline;
 
 }
 .album-list{
@@ -162,9 +185,16 @@ header{
 
 }
 .album h4{
-    height: 60px;
+    height: 100px;
     margin: auto 0;
     padding-top: 5px;
+}
+.album span{
+    font-style: italic;
+}
+.album h5{
+    color: #64FFDA;
+    text-decoration: underline;
 }
 .album-image{
     display: block;

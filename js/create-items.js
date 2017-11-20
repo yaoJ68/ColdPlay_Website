@@ -44,7 +44,7 @@ for (var i = 0; i < items.length; i++) {
 
     // generate html for buy icon and link to amazon
     document.writeln("<p class='icons'>");
-    document.writeln("<button type='button' data-text-swap=\"Added to Cart\" class='btn btn-warning buy' style='margin: 10px 5px;' id=" + i +">Buy Now</button>");
+    document.writeln("<button type='button' data-text-swap=\"Added to Cart\" class='btn btn-warning buy' style='margin: 10px 5px;' id=" + i +">Add to Cart</button>");
     document.write("<a href='");
     document.write(items[i].saleLocation);
     document.writeln("'>");
