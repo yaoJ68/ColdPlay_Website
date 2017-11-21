@@ -5,8 +5,6 @@ html,body{
     background-size: cover;
     height: 100%;
 }
-
-
 .header{
     height: 80%;
     position: relative;
@@ -20,6 +18,7 @@ html,body{
 .header_toptwo{
     position: fixed;
     width:100%;
+    background: rgba(0, 0, 0, 0.4);
 }
 .header_text{
     font-family: 'Kalam', cursive;
@@ -32,6 +31,12 @@ html,body{
     font-family: 'Satisfy', cursive;
     font-size: 60px;
     color: #FFEB3B;
+}
+.header_text span:hover{
+    color: #00BCD4;
+}
+.header_text a:hover{
+    text-decoration: none;
 }
 .social_icon{
     display: inline-block;
@@ -56,7 +61,7 @@ html,body{
 /*navigation bar*/
 /* basic menu styles */
 .nav{
-    background: #000;
+    background: #5D4037;
     width: 100%;
     margin: 0 auto;
 }
@@ -114,12 +119,12 @@ html,body{
 */
 .nav-front {
     transform: rotatex(0deg) translatez(25px);
-    background: black 0 0;
+    background: #5D4037 0 0;
 }
 
 .nav-back {
     transform: rotatex(-90deg) translatez(25px);
-    background-color: #616161;
+    background-color: #8D6E63;
 }
 
 .nav-front, .nav-back {
@@ -162,7 +167,7 @@ html,body{
     text-align: center;
 }
 .header-text h1{
-    font-size: 50px;
+    font-size: 70px;
     color: #FFEB3B;
     margin: auto;
     font-family: 'Nosifer', cursive;
@@ -193,6 +198,7 @@ html,body{
     background: rgba(0, 0, 0, 0.3);
     padding: 20px 20px 90px 20px;
     margin: 0 auto;
+    opacity: 0;
 }
 
 .visit-store{

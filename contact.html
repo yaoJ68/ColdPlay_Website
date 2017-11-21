@@ -4,47 +4,90 @@
 	<meta charset="utf-8">
 	<title>Contact</title>
 	<link rel="stylesheet" href="css/contactStyle.css">
-	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kalam|Satisfy|Roboto+Slab|Nosifer|Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--social icons-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--cart-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	</head>
-	<body>
-		<header>
-			<div id="background-overlay">
-				<div class="nav-bar">
-					<div class="container">
-						<h1 id="logo"><a href="index.html" ><span style="color: #FAFAFA;">Coldplay</span></a></h1>
 
-						<nav class="nav-list">
-							<a href="index.html">Home</a>
-							<a href="about.html">About</a>
-							<a href="contact.html">Contact</a>
-							<a href="store.html">Store</a>
-							<a href="cart.html">Cart</a>
-						</nav>
-					</div>
-				</div>
-
-				<div class="header-text">
-					<h1>CONTACT</h1>
+</head>
+<body>
+	<header class="header">
+		<div class="header_toptwo">
+			<div class="header_logo">
+				<p class="header_text"><a href="index.html"><span>Coldplay</span></a>&nbsp&nbspA Head Full of Dreams</p>
+				<div class="social_icon">
+					<a href="https://twitter.com/coldplay/"><i class="fa fa-twitter-square"></i></a>
+					<a href="https://www.facebook.com/coldplay"><i class="fa fa-facebook-square"></i></a>
+					<a href="https://www.instagram.com/coldplay/"><i class="fa fa-instagram"></i></a>
+					<a href="https://plus.google.com/+Coldplay"><i class="fa fa-google-plus-square"></i></a>
+					<a href="http://coldplay.tumblr.com/"><i class="fa fa-tumblr-square"></i></a>
 				</div>
 			</div>
-		</header>
+			<div class="nav">
+				<ul class="block-menu">
+					<li><a href="index.html" class="three-d">Home
+						<span aria-hidden="true" class="three-d-box">
+                            <span class="nav-front">Home</span>
+                            <span class="nav-back">Home</span>
+                        </span>
+					</a>
+					</li>
+					<li><a href="tour.html" class="three-d">Tour
+						<span aria-hidden="true" class="three-d-box">
+                            <span class="nav-front">Tour</span>
+                            <span class="nav-back">Tour</span>
+                        </span>
+					</a>
+					</li>
+					<li><a href="store.html" class="three-d">Store
+						<span aria-hidden="true" class="three-d-box">
+                            <span class="nav-front">Store</span>
+                            <span class="nav-back">Store</span>
+                        </span>
+					</a>
+					</li>
+					<li><a href="about.html" class="three-d">About
+						<span aria-hidden="true" class="three-d-box">
+                            <span class="nav-front">About</span>
+                            <span class="nav-back">About</span>
+                        </span>
+					</a>
+					</li>
+					<li><a href="contact.html" class="three-d">Contact
+						<span aria-hidden="true" class="three-d-box">
+                            <span class="nav-front">Contact</span>
+                            <span class="nav-back">Contact</span>
+                        </span>
+					</a>
+					</li>
+					<a href="cart.html" class="cart-image">
+						<span class="glyphicon glyphicon-shopping-cart"></span>
+					</a>
+					<!-- more items here -->
+				</ul>
+			</div>
+		</div>
+		<div class="header-text">
+			<h1>Contact</h1>
+		</div>
+	</header>
 
-		<div class="main">
-			<div class="conact">
+
+	<div class="main">
+			<div class="contact">
 				<h1>Our Address</h1>
 				<h3>WE'D LOVE TO HEAR FROM YOU, SO DO PLEASE FEEL FREE TO USE THE FORM BELOW TO GET IN TOUCH.</h3>
-				<p>Due to the overwhelming number of messages we receive, it may not be possible to respond to every one, but all mail is read (and really appreciated).
-
-					Please note that this contact form is for fan mail only. We do not deal with live booking enquires, press requests etc. Unfortunately due to the volume of email received, we can only accept one email per sender.
-
+				<p>Due to the overwhelming number of messages we receive,
+					it may not be possible to respond to every one, but all mail is read (and really appreciated).
+					Please note that this contact form is for fan mail only.
+					We do not deal with live booking enquires, press requests etc.
+					Unfortunately due to the volume of email received, we can only accept one email per sender.
 					Thank you.</p>
-				<ul>
-					<li>Email: coldPlay@email.com</li>
-					<li>Phone: +0(000)-111-000</li>
-				</ul>
+				<div class="contact_info">
+					<p>Email: coldPlay@email.com</p>
+					<p>Phone: +0(000)-111-000</p>
+				</div>
 			</div>
 			<div class="form">
 				<input class="contact-input" type="text" placeholder="Name">
@@ -52,12 +95,11 @@
 				<textarea placeholder="Message" class="contact-input"></textarea>
 				<input type="submit" class="contact-input submitButton" onclick="alert('Thank you for sending us message! We will respond to you as soon as possible! ')" value="Send Message">
 			</div>
-		</div>
+	</div>
 
-		<footer>
-			<p style="color: #FAFAFA;"><i>Created by Y. Jiang</i></p>
-		</footer>
-
-	</body>
+	<footer>
+		<p>Created By Y.Jiang, F.A.Ahmad, J.Spilchuk, A.Chaya</p>
+	</footer>
+</body>
 </html>
 
