@@ -42,7 +42,7 @@ html,body{
 .social_icon{
     display: inline-block;
     position: absolute;
-    right: 0;
+    right: 1.8%;
     bottom: 15px;
 }
 .social_icon i{
@@ -145,7 +145,7 @@ html,body{
 .cart-image{
     padding: 10px 0;
     position: absolute;
-    right: 0;
+    right: 1.8%;
 
 }
 .cart-image span{
