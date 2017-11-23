@@ -2,7 +2,8 @@ var itemsToBuy = [];
 if (sessionStorage.getItem("CartItem") != null)
     itemsToBuy = JSON.parse(sessionStorage.getItem("CartItem"));
 
-function init() {
+window.onload = function () {
+	// Adds item to cart and changes text to 'Added to Cart'
     var buyButton = document.getElementsByClassName("btn btn-warning buy");
     for (let i = 0; i < buyButton.length; i++) {
         buyButton[i].addEventListener("click", function(){
@@ -11,32 +12,33 @@ function init() {
         });
     }
 
-    var removeButton = document.getElementsByClassName("btn btn-warning remove");
-    for (let i = 0; i < removeButton.length; i++) {
-        removeButton[i].addEventListener("click", function(){
-            removeFromCart(removeButton[i].id);
-        });
-    }
-
-    var totalPrice = 0;
-    for(let i = 0; i < itemsToBuy.length; i++) {
-        totalPrice = totalPrice + parseFloat(itemsToBuy[i].price);
-    }
-    document.getElementById("total").innerHTML = totalPrice.toFixed(2);
-
-    var buy_button = document.getElementsByClassName("btn btn-warning buy");
-    buy_button.addEventListener('click', function() {
-        buy_button.innerHTML = "Added to Cart";
-    });
-}
-
-function addToCart(id) {
-    itemsToBuy.push(items[id]);
-    sessionStorage.setItem("CartItem", JSON.stringify(itemsToBuy));
-}
-
-function removeFromCart(id) {
-    itemsToBuy.splice(id, 1);
-    sessionStorage.setItem("CartItem", JSON.stringify(itemsToBuy));
-    location.reload();
+	// Adds item to cart. If item already exists in cart it will not add it.
+	// ISSUE: When reloading page, it will re-add items that already exist.
+	function addToCart(id) {
+		var in_basket = 0;
+		if (id >= albumItems.length) {
+			for (let i = 0; i < itemsToBuy.length; i++) {
+				if (itemsToBuy[i] == otherItems[id-albumItems.length]) {
+					in_basket = 1;
+					break;
+				}
+			}
+			if (in_basket == 0) {
+				alert(itemsToBuy[0].title);
+				itemsToBuy.push(otherItems[id-albumItems.length]);
+			}
+		}
+		else {
+			for (let i = 0; i < itemsToBuy.length; i++) {
+				if (itemsToBuy[i] == albumItems[id]) {
+					in_basket = 1;
+					break;
+				}
+			}
+			if (in_basket == 0) {
+				itemsToBuy.push(albumItems[id]);
+			}
+		}
+		sessionStorage.setItem("CartItem", JSON.stringify(itemsToBuy));
+	}
 }
