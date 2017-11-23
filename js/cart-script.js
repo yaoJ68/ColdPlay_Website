@@ -13,12 +13,11 @@ window.onload = function () {
     }
 
 	// Adds item to cart. If item already exists in cart it will not add it.
-	// ISSUE: When reloading page, it will re-add items that already exist.
 	function addToCart(id) {
 		var in_basket = 0;
 		if (id >= albumItems.length) {
 			for (let i = 0; i < itemsToBuy.length; i++) {
-				if (itemsToBuy[i] == otherItems[id-albumItems.length]) {
+				if (itemsToBuy[i].title == otherItems[id-albumItems.length].title) {
 					in_basket = 1;
 					break;
 				}
@@ -30,7 +29,7 @@ window.onload = function () {
 		}
 		else {
 			for (let i = 0; i < itemsToBuy.length; i++) {
-				if (itemsToBuy[i] == albumItems[id]) {
+				if (itemsToBuy[i].title == albumItems[id].title) {
 					in_basket = 1;
 					break;
 				}
