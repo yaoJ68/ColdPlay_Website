@@ -7,11 +7,12 @@
     <link href="https://fonts.googleapis.com/css?family=Kalam|Satisfy|Roboto+Slab|Nosifer|Oswald" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--social icons-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--cart-->
-    <script src="./js/items.js"></script>
-    <!--<script src="./js/cart-script.js"></script>-->
+    <script src="./js/albumItems.js"></script>
+	<script src="./js/otherItems.js"></script>
+    <script src="./js/cart-script.js"></script>
 
 </head>
-<body><!--onload="init()"-->
+<body>
     <header class="header">
         <div class="header_toptwo">
             <div class="header_logo">
@@ -61,7 +62,7 @@
                         </span>
                     </a>
                     </li>
-                    <a href="cart(2).html" class="cart-image">
+                    <a href="cart.html" class="cart-image">
                         <span class="glyphicon glyphicon-shopping-cart"></span>
                     </a>
                     <!-- more items here -->
@@ -84,8 +85,7 @@
             <p>Albums</p>
         </div>
         <div class="album-list">
-            <script src="./js/create-items.js"></script>
-            <script src="./js/store-script.js"></script>
+            <script src="./js/createAlbumItems.js"></script>
         </div>
         <br>
 
@@ -93,72 +93,9 @@
             <p>Others</p>
         </div>
         <div class="album-list">
-            <div class="album">
-                <img class="album-image" src="img/items1.jpg">
-                <h4><span>A Head Full of Dreams </span><br>Custom Printing Baseball Caps</h4>
-                <h5>CDN$11.59</h5>
-                <p class="icons">
-                    <button type="button" data-text-swap="Added to Cart" class="btn btn-warning buy" style="margin: 10px 5px;" id="6">Add to Cart</button>
-                    <a href="https://www.amazon.ca/Coldplay-Dreams-Custom-Printing-Baseball/dp/B01HNPNPLK/ref=sr_1_4?ie=UTF8&qid=1511131334&sr=8-4&keywords=coldplay">
-                        <button type="button" class="btn btn-warning" style="margin: 10px 5px;">Amazon</button>
-                    </a>
-                </p>
-            </div>
-            <div class="album">
-                <img class="album-image" src="img/items2.jpg">
-                <h4><span>A Head Full of Dreams </span><br>Cool Beanie Hat Cap</h4>
-                <h5>CDN$13.00</h5>
-                <p class="icons">
-                    <button type="button" data-text-swap="Added to Cart" class="btn btn-warning buy" style="margin: 10px 5px;" id="6">Add to Cart</button>
-                    <a href="">
-                        <button type="button" class="btn btn-warning" style="margin: 10px 5px;">Amazon</button>
-                    </a>
-                </p>
-            </div>
-            <div class="album">
-                <img class="album-image" src="img/items3.jpeg">
-                <h4><span>Sky Full of Stars </span><br>Soft T-Shirt</h4>
-                <h5>CDN$13.50</h5>
-                <p class="icons">
-                    <button type="button" data-text-swap="Added to Cart" class="btn btn-warning buy" style="margin: 10px 5px;" id="6">Add to Cart</button>
-                    <a href="https://www.amazon.ca/Coldplay-Full-Stars-Soft-T-Shirt/dp/B00XWIMMTY/ref=sr_1_17?ie=UTF8&qid=1511132799&sr=8-17&keywords=coldplay">
-                        <button type="button" class="btn btn-warning" style="margin: 10px 5px;">Amazon</button>
-                    </a>
-                </p>
-            </div>
-            <div class="album">
-                <img class="album-image" src="img/items4.jpg">
-                <h4><span>I AM YOU </span><br>T-Shirt</h4>
-                <h5>CDN$24.95</h5>
-                <p class="icons">
-                    <button type="button" data-text-swap="Added to Cart" class="btn btn-warning buy" style="margin: 10px 5px;" id="6">Add to Cart</button>
-                    <a href="https://coldplay.fanfire.com/cgi-bin/WebObjects/Store.woa/wa/product?sku=COL73166">
-                        <button type="button" class="btn btn-warning" style="margin: 10px 5px;">Coldplay</button>
-                    </a>
-                </p>
-            </div>
-            <div class="album">
-                <img class="album-image" src="img/items5.jpg">
-                <h4><span>Ghost Stories </span><br>IPhone 6 Plus Case</h4>
-                <h5>CDN$12.95</h5>
-                <p class="icons">
-                    <button type="button" data-text-swap="Added to Cart" class="btn btn-warning buy" style="margin: 10px 5px;" id="6">Add to Cart</button>
-                    <a href="https://coldplay.fanfire.com/cgi-bin/WebObjects/Store.woa/wa/product?sourceCode=COLWEBUKWUSD&sku=COL63046">
-                        <button type="button" class="btn btn-warning" style="margin: 10px 5px;">Coldplay</button>
-                    </a>
-                </p>
-            </div>
-            <div class="album">
-                <img class="album-image" src="img/items6.jpg">
-                <h4><span>Splatter Photo North American 2017 Tour </span><br>Black T-Shirt</h4>
-                <h5>CDN$39.95</h5>
-                <p class="icons">
-                    <button type="button" data-text-swap="Added to Cart" class="btn btn-warning buy" style="margin: 10px 5px;" id="6">Add to Cart</button>
-                    <a href="https://coldplay.fanfire.com/cgi-bin/WebObjects/Store.woa/wa/product?sku=COL74520">
-                        <button type="button" class="btn btn-warning" style="margin: 10px 5px;">Coldplay</button>
-                    </a>
-                </p>
-            </div>
+			<script src="./js/createOtherItems.js"></script>
+            
+            <!--
             <div class="album">
                 <img class="album-image" src="img/items7.jpg">
                 <h4><span>Flower Of Life </span><br>Mug</h4>
@@ -169,7 +106,7 @@
                         <button type="button" class="btn btn-warning" style="margin: 10px 5px;">Coldplay</button>
                     </a>
                 </p>
-            </div>
+            </div>-->
         </div>
     </div>
 
