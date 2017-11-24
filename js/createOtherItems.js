@@ -24,7 +24,7 @@ for (var i = albumItems.length; i < (albumItems.length + otherItems.length); i++
 	
     document.writeln("<button type='button' class='btn btn-warning buy' style='margin: 10px 5px;' id=" + i +">Add to Cart</button>");
     
-	document.write("<a href='");
+	document.write("<a target=\"_blank\" href='");
     document.write(otherItems[i-albumItems.length].saleLocation);
     document.write("'>");
     document.write(" <button type='button' class='btn btn-warning' style='margin: 10px 5px;'>Amazon</button>");

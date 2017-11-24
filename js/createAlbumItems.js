@@ -45,7 +45,7 @@ for (var i = 0; i < albumItems.length; i++) {
     // generate html for buy icon and link to amazon
     document.writeln("<p class='icons'>");
 	document.writeln("<button type='button' class='btn btn-warning buy' style='margin: 10px 5px;' id=" + i +">Add to Cart</button>");
-    document.write("<a href='");
+    document.write("<a target=\"_blank\" href='");
     document.write(albumItems[i].saleLocation);
     document.writeln("'>");
     document.writeln(" <button type='button' class='btn btn-warning' style='margin: 10px 5px;'>Amazon</button>");
