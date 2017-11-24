@@ -222,9 +222,13 @@ html,body{
     background-color: #E65100;
 }
 footer{
-    height: 40px;
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
     background: rgba(0, 0, 0, 0.3);
     color: #ffffff;
     font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
 }
