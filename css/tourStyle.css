@@ -302,6 +302,10 @@ html,body{
 .ticket_buy button:hover{
     background-color: #E65100;
 }
+.ticket_date{
+    color:#FF6E40;
+    text-decoration: underline;
+}
 footer{
     height: 40px;
     text-align: center;

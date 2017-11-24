@@ -1,4 +1,4 @@
-/*New cart page script*/
+/*script for calculating total price of items in the cart page, has delete & select button*/
 window.onload = function () {
     if (!document.getElementsByClassName) {
         document.getElementsByClassName = function (cls) {
@@ -32,7 +32,6 @@ window.onload = function () {
                 tr[i].className = 'on';
                 selected += parseInt(tr[i].getElementsByTagName('input')[1].value); //quantity of selected items
                 price += parseFloat(tr[i].getElementsByTagName('td')[4].innerHTML); //total price
-                //html += '<div><img src="'+tr[i].getElementsByTagName('img')[0].src+'"><span class="del" index="'+i+'">Cancel</span></div>';// 添加图片到弹出层已选商品列表容器
             }else{
                 tr[i].className = '';
             }
