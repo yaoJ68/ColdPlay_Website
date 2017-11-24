@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>CheckOut</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="./js/menu-script.js"></script>
-    <script src="js/items.js"></script>
+
     <script>
         function sayHello() {
             var x=document.getElementsByClassName('form-control');
@@ -16,23 +15,24 @@
                     return
                 }
             }
+
+            var credNum = x[0];
+            var cardno = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+            if(!credNum.value.match(cardno)){
+                alert("Not a valid Visa credit card number!");
+                return;
+            }
             alert('Thank you for shopping with us! We will send you the item as soon as possible!');
             window.history.back();
         }
     </script>
 </head>
-<body onload="init()">
-
-<div id="catalog">
-    <script src="./js/checkout.js"></script>
-</div>
-
-
+<body>
     <h1 style="text-align: center;position: relative;top: 30px;">Check Out</h1>
     <form style=" width: 60%;margin: 60px auto;" method="post">
         <div class="form-group">
-            <label class="col-form-label" for="formGroupExampleInput">CARD NUMBER</label>
-            <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Valid Card Number">
+            <label class="col-form-label" for="formGroupExampleInput">CARD NUMBER (Visa Only)</label>
+            <input type="number" class="form-control" id="formGroupExampleInput" placeholder="4XXX-XXXX-XXXX-XXXX">
         </div>
         <div class="form-group">
             <label class="col-form-label" for="formGroupExampleInput2">NAME ON CARD</label>
