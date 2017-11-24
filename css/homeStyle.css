@@ -120,19 +120,31 @@ html,body{
 .cover-center{
     position: absolute;
     z-index: 2;
-    top: 20px;
-    right: 20px;
-    width: 120px;
-    height: 120px;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background: #730c43; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom, #730c43, transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, #730c43, transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, #730c43, transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, #730c43, transparent); /* Standard syntax */
 }
 .cover-center img{
-    margin: 0 5px;
+    margin: 40px 20px 20px;
     display: inline-block;
-    width: 40%;
+    height: 50%;
     z-index: 2;
     object-fit: cover;
 }
 #cover-audio:hover{
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+.cover-fast:hover{
     -webkit-transform:scale(1.25); /* Safari and Chrome */
     -moz-transform:scale(1.25); /* Firefox */
     -ms-transform:scale(1.25); /* IE 9 */
@@ -166,7 +178,7 @@ html,body{
 .text-c {
     left: 0;
     transform: translate3d(0, -4rem, 0);
-    animation-delay: 100ms;
+    animation-delay: 300ms;
     animation: text-w 2100ms ease-in infinite;
 }
 .text-o {
@@ -236,7 +248,7 @@ html,body{
         transform: translate3d(0, 0, 0);
     }
     45% {
-        transform: translate3d(0, -3rem, 0);
+        transform: translate3d(0, -4rem, 0);
     }
     85% {
         transform: translate3d(0, 0, 0);

@@ -49,7 +49,6 @@
                 <a href="store.html" class="nav-word">Store</a>
                 <a href="about.html" class="nav-word">About</a>
                 <a href="contact.html" class="nav-word">Contact</a>
-                <a href="cart.html" class="nav-word">Cart</a>
             </nav>
         </div>
         <p class="icons">
@@ -62,12 +61,14 @@
     </div>
 
     <div class="cover-center">
-        <img id="cover-wave" src="img/audio-wave.png">
+        <img class="cover-fast" src="img/fast-backward.png" onclick="next()"/>
         <img id="cover-audio" src="img/pause.png" onclick="play()"/>
+        <img class="cover-fast" src="img/fast-forward.png" onclick="next()"/>
         <audio id="audio-play" loop autoplay>
-            <source src="audio/Home-Yellow.mp3" type="audio/mpeg">
+            <source id="current-audio" src="audio/Yellow.mp3" type="audio/ogg">
             Your browser does not support the audio element.
         </audio>
+
     </div>
 
     <script src="js/homeAudio.js"></script>
