@@ -18,7 +18,7 @@ var ticketList = [
     {
         "title": "Suncorp Stadium",
         "Location":"Location: Brisbane, Australia",
-        "Time":">Date: 06 December 2017",
+        "Time":"Date: 06 December 2017",
         "Price_Word":"Ticket Price",
         "price":"CDN$92.00",
         "photoLocation":"img/img10.jpg"
@@ -34,7 +34,7 @@ var ticketList = [
     {
         "title": "Allianz Stadium",
         "Location":"Location: Sydney, Australia",
-        "Time":">Date: 13 December 2017",
+        "Time":"Date: 13 December 2017",
         "Price_Word":"Ticket Price",
         "price":"CDN$86.00",
         "photoLocation":"img/img10.jpg"
