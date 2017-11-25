@@ -22,6 +22,12 @@
                 alert("Not a valid Visa credit card number!");
                 return;
             }
+            var cvcNum = x[3];
+			var cvcValid = /^(?:[0-9]{3})$/;
+			if(!cvcNum.value.match(cvcValid)){
+				alert("Not a valid Visa CVC!");
+				return;
+			}
             alert('Thank you for shopping with us! We will send you the item as soon as possible!');
             window.history.back();
         }
