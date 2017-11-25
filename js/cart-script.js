@@ -1,5 +1,5 @@
 var itemsToBuy = [];
-if (sessionStorage.getItem("CartItem") != null)
+if (sessionStorage.getItem("CartItem") !== null)
     itemsToBuy = JSON.parse(sessionStorage.getItem("CartItem"));
 
 window.onload = function () {
@@ -15,25 +15,39 @@ window.onload = function () {
 	// Adds item to cart. If item already exists in cart it will not add it.
 	function addToCart(id) {
 		var in_basket = 0;
-		if (id >= albumItems.length) {
-			for (let i = 0; i < itemsToBuy.length; i++) {
-				if (itemsToBuy[i].title == otherItems[id-albumItems.length].title) {
-					in_basket = 1;
-					break;
-				}
-			}
-			if (in_basket == 0) {
-				itemsToBuy.push(otherItems[id-albumItems.length]);
-			}
+		if (id >= 15) {
+            for (let i = 0; i < itemsToBuy.length; i++) {
+                if (itemsToBuy[i].title === ticketList[id-15].title) {
+                    alert("Item has already been added to cart. You can change the quantity in your cart!");
+                    in_basket = 1;
+                    break;
+                }
+            }
+            if (in_basket === 0) {
+                itemsToBuy.push(ticketList[id-15]);
+            }
+		}
+		else if(id >= 8){
+            for (let i = 0; i < itemsToBuy.length; i++) {
+                if (itemsToBuy[i].title === otherItems[id-albumItems.length].title) {
+                    alert("Item has already been added to cart. You can change the quantity in your cart!");
+                    in_basket = 1;
+                    break;
+                }
+            }
+            if (in_basket === 0) {
+                itemsToBuy.push(otherItems[id-albumItems.length]);
+            }
 		}
 		else {
 			for (let i = 0; i < itemsToBuy.length; i++) {
-				if (itemsToBuy[i].title == albumItems[id].title) {
+				if (itemsToBuy[i].title === albumItems[id].title) {
+                    alert("Item has already been added to cart. You can change the quantity in your cart!");
 					in_basket = 1;
 					break;
 				}
 			}
-			if (in_basket == 0) {
+			if (in_basket === 0) {
 				itemsToBuy.push(albumItems[id]);
 			}
 		}

@@ -107,7 +107,7 @@ window.onload = function () {
                     var conf = confirm('Are you sure to remove this item?');
                     if (conf) {
                         for (let j = 0; j < itemsToBuy.length; j++) {
-							if (itemsToBuy[j].title == this.cells[1].getElementsByTagName('span')[0].innerHTML) {
+							if (itemsToBuy[j].title === this.cells[1].getElementsByTagName('span')[0].innerHTML) {
 								itemsToBuy.splice(j, 1);
 								sessionStorage.setItem("CartItem", JSON.stringify(itemsToBuy));
 								break;
@@ -142,7 +142,7 @@ window.onload = function () {
                     //delete row
                     if (tr[i].getElementsByTagName('input')[0].checked) {
                         for (let j = 0; j < itemsToBuy.length; j++) {
-							if (itemsToBuy[j].title == tr[i].cells[1].getElementsByTagName('span')[0].innerHTML) {
+							if (itemsToBuy[j].title === tr[i].cells[1].getElementsByTagName('span')[0].innerHTML) {
 								itemsToBuy.splice(j, 1);
 								sessionStorage.setItem("CartItem", JSON.stringify(itemsToBuy));
 								break;

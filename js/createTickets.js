@@ -27,11 +27,12 @@ for (var i=15; i<20 ;i++){
     document.write(ticketList[i-15].Price_Word);
     document.write("<br>");
     document.write("<span>");
+    document.write("CDN$")
     document.write(ticketList[i-15].price);
     document.write("</span>");    //closing tag - span
     document.write("</h3>");        //closing tag - h3
 
-    document.writeln("<button type='button' id=" + i +">Add to Cart </button>");
+    document.writeln("<button type='button' class='btn btn-warning buy' id=" + i +">Add to Cart </button>");
     document.write("</div>");    //closing tag for "ticket_buy"
     document.write("</div>");    //closing tag for "ticket"
 }
