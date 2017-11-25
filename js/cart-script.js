@@ -23,7 +23,6 @@ window.onload = function () {
 				}
 			}
 			if (in_basket == 0) {
-				alert(itemsToBuy[0].title);
 				itemsToBuy.push(otherItems[id-albumItems.length]);
 			}
 		}
