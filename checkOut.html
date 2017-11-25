@@ -52,9 +52,25 @@
             </div>
             <div class="col">
                 <label class="col-form-label" for="formGroupExampleInput">CVC</label>
-                <input type="number" class="form-control" placeholder="CVC">
+                <input type="number" class="form-control" id="restrictCVC" placeholder="CVC">
             </div>
         </div>
+        <script>
+			var restrict1 = document.getElementById("formGroupExampleInput");
+			var restrict2 = document.getElementById("restrictCVC");
+			restrict1.addEventListener("keydown", function(e) {
+			  // prevent: "e", "=", ",", "-", "."
+			  if ([69, 187, 188, 189, 190].includes(e.keyCode)) {
+				e.preventDefault();
+			  }
+			})
+			restrict2.addEventListener("keydown", function(e) {
+			  // prevent: "e", "=", ",", "-", "."
+			  if ([69, 187, 188, 189, 190].includes(e.keyCode)) {
+				e.preventDefault();
+			  }
+			})
+		</script>
         <br>
         <button type="button" class="btn btn-primary btn-lg btn-block" onclick="sayHello()">Purchase</button>
     </form>
