@@ -1,4 +1,8 @@
 /*script for calculating total price of items in the cart page, has delete & select button*/
+var itemsToBuy = [];
+if (sessionStorage.getItem('CartItem') != null) {
+    itemsToBuy = JSON.parse(sessionStorage.getItem('CartItem'));
+}
 window.onload = function () {
     if (!document.getElementsByClassName) {
         document.getElementsByClassName = function (cls) {
