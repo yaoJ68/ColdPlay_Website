@@ -42,10 +42,10 @@ window.onload = function () {
         }
         selectedTotal.innerHTML = selected; // quantity of selected items
         priceTotal.innerHTML = price.toFixed(2); // total price
-        selectedViewList.innerHTML = html;
+        /*selectedViewList.innerHTML = html;
         if (selected===0) {
             foot.className = 'foot';
-        }
+        }*/
     }
 
     // calculate single item total price
@@ -164,4 +164,15 @@ window.onload = function () {
     checkAllInputs[0].onclick();
 
 
+
 };
+
+function isCartEmpty() {
+    if (document.getElementById('selectedTotal').innerText === '0' || document.getElementById('cartTable').children[1].rows === null) {
+        alert("No item is selected!");
+    } else {
+        window.location.href ="./checkOut.html" ;
+    }
+};
+
+
