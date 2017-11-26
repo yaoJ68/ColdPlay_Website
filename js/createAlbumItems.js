@@ -3,6 +3,31 @@ for (var i = 0; i < albumItems.length; i++) {
     // generate html for the album
     document.writeln("<div class='album'>");
 
+    if (i == 0){
+        document.writeln("<div id='album1'>");
+    }
+    else if (i == 1){
+        document.writeln("<div id='album2'>");
+    }
+    else if (i == 2){
+        document.writeln("<div id='album3'>");
+    }
+    else if (i == 3){
+        document.writeln("<div id='album4'>");
+    }
+    else if (i == 4){
+        document.writeln("<div id='album5'>");
+    }
+    else if (i == 5){
+        document.writeln("<div id='album6'>");
+    }else if (i == 6){
+        document.writeln("<div id='album7'>");
+    }else if (i == 7){
+        document.writeln("<div id='album8'>");
+    }
+
+
+
     //generate the audio -- currently not fully implemented
     document.write("<audio id=\"");
     document.write(i+1);
@@ -53,6 +78,7 @@ for (var i = 0; i < albumItems.length; i++) {
     document.writeln("</p>");
 
     // generate html to close the album div
+    document.writeln("</div>");
     document.writeln("</div>");
 
 }
